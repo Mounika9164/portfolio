@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mounika | Creative Portfolio</title>
+
+    <!-- GOOGLE FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- INTERNAL CSS -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #0f172a;
+            color: #e5e7eb;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: black;
+            color: white;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 600;
+        }
+
+        .hero p {
+            margin-top: 5px;
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        /* GALLERY */
+        .gallery {
+            padding: 60px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        /* CARD */
+        .card {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            cursor: pointer;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.6);
+        }
+
+        .card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .card:hover img {
+            transform: scale(1.1);
+        }
+
+        /* TEXT OVERLAY */
+        .card span {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.85));
+            font-weight: 500;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .card:hover span {
+            opacity: 1;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #020617;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* MOBILE */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HERO -->
+    <section class="hero">
+        <h1>Hi, I'm Mounika</h1>
+        <p>Creative Thumbnail Designer</p>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="gallery">
+        <div class="card">
+            <img src="images/image1.jpg">
+            <span>Thumbnail Design 1</span>
+        </div>
+
+        <div class="card">
+            <img src="images/image2.jpg">
+            <span>Thumbnail Design 2</span>
+        </div>
+
+        <div class="card">
+            <img src="images/image3.jpg">
+            <span>Thumbnail Design 3</span>
+        </div>
+
+        <div class="card">
+            <img src="images/image4.jpg">
+            <span>Thumbnail Design 4</span>
+        </div>
+
+        <div class="card">
+            <img src="images/image5.jpg">
+            <span>Thumbnail Design 5</span>
+        </div>
+
+        <div class="card">
+            <img src="images/image6.jpg">
+            <span>Thumbnail Design 6</span>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        © 2025 Mounika | Designed with ❤️
+    </footer>
+
+</body>
+</html>
+
