@@ -1,163 +1,283 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Mounika | Creative Portfolio</title>
+<meta charset="UTF-8">
+<title>Peruswamula Mounika</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- GOOGLE FONT -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-    <!-- INTERNAL CSS -->
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
 
-        body {
-            background: #0f172a;
-            color: #e5e7eb;
-        }
+body{
+    background:linear-gradient(135deg,#020617,#0f172a,#020617);
+    color:#e5e7eb;
+}
 
-        /* HERO SECTION */
-        .hero {
-            height: 60vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background: black;
-            color: white;
-            text-align: center;
-        }
+/* HEADER */
+header{
+    text-align:center;
+    padding:60px 20px;
+}
 
-        .hero h1 {
-            font-size: 3rem;
-            font-weight: 600;
-        }
+header h1{
+    font-size:3rem;
+}
 
-        .hero p {
-            margin-top: 5px;
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
+.social-links a{
+    margin:0 12px;
+    color:#38bdf8;
+    text-decoration:none;
+    font-weight:500;
+}
 
-        /* GALLERY */
-        .gallery {
-            padding: 60px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
+/* CONTAINER */
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:40px;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(18px);
+    border-radius:30px;
+}
 
-        /* CARD */
-        .card {
-            position: relative;
-            border-radius: 20px;
-            overflow: hidden;
-            cursor: pointer;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-            transition: transform 0.4s ease, box-shadow 0.4s ease;
-        }
+/* BUTTONS */
+.buttons,.sub-buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-top:30px;
+}
 
-        .card:hover {
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 30px 60px rgba(0,0,0,0.6);
-        }
+.btn{
+    padding:14px 34px;
+    border-radius:30px;
+    background:rgba(255,255,255,0.15);
+    border:1px solid rgba(255,255,255,0.25);
+    color:white;
+    cursor:pointer;
+    transition:0.4s;
+}
 
-        .card img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-            transition: transform 0.4s ease;
-        }
+.btn:hover{
+    background:#38bdf8;
+    color:#020617;
+    transform:translateY(-5px);
+}
 
-        .card:hover img {
-            transform: scale(1.1);
-        }
+/* SECTIONS */
+.section{
+    display:none;
+    margin-top:40px;
+    animation:fade 0.5s ease;
+}
 
-        /* TEXT OVERLAY */
-        .card span {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            padding: 15px;
-            background: linear-gradient(transparent, rgba(0,0,0,0.85));
-            font-weight: 500;
-            text-align: center;
-            opacity: 0;
-            transition: opacity 0.4s ease;
-        }
+.section h2{
+    text-align:center;
+    margin-bottom:15px;
+    color:#38bdf8;
+}
 
-        .card:hover span {
-            opacity: 1;
-        }
+.section p{
+    text-align:center;
+    max-width:750px;
+    margin:auto;
+}
 
-        /* FOOTER */
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #020617;
-            font-size: 0.9rem;
-            opacity: 0.8;
-        }
+/* GALLERY */
+.gallery{
+    margin-top:30px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
 
-        /* MOBILE */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-        }
-    </style>
+.gallery img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    border-radius:20px;
+}
+
+/* FOOTER */
+footer{
+    margin:60px 0;
+    text-align:center;
+}
+
+@keyframes fade{
+    from{opacity:0; transform:translateY(15px);}
+    to{opacity:1; transform:translateY(0);}
+}
+</style>
 </head>
+
 <body>
 
-    <!-- HERO -->
-    <section class="hero">
-        <h1>Hi, I'm Mounika</h1>
-        <p>Creative Thumbnail Designer</p>
-    </section>
+<header>
+    <h1>PERUSWAMULA MOUNIKA</h1>
+    <div class="social-links">
+        <a href="https://www.instagram.com/bujji.diaries/" target="_blank">Instagram</a>
+        <a href="https://www.linkedin.com/in/mounika-peruswamula-75bb7623a/" target="_blank">LinkedIn</a>
+    </div>
+</header>
 
-    <!-- GALLERY -->
-    <section class="gallery">
-        <div class="card">
+<div class="container">
+
+    <!-- MAIN BUTTONS -->
+    <div class="buttons">
+        <button class="btn" onclick="show('personal')">Personal Dashboard</button>
+        <button class="btn" onclick="show('professional')">Professional Dashboard</button>
+        <button class="btn" onclick="show('interests')">My Interests</button>
+        <button class="btn" onclick="show('certificates')">My Certificates</button>
+    </div>
+
+    <!-- PERSONAL -->
+    <div id="personal" class="section">
+        <h2>Personal Dashboard</h2>
+        <p>
+            • Computer background student<br> • Soft Tech trainee <br>•  
+            Enthusiastic in building myself as a multi-talented girl
+        </p>
+    </div>
+
+    <!-- PROFESSIONAL -->
+    <div id="professional" class="section">
+        <h2>Professional Dashboard</h2>
+       <div class="resume-card">
+            <h3>Mounika Peruswamula</h3>
+            <p class="contact">
+                📍 Tirupati, Andhra Pradesh <br>
+                ✉️ mperuswamula@gmail.com
+            </p>
+
+            <h3>Professional Summary</h3>
+            <p>
+                Enthusiastic and detail-oriented Computer Science graduate with strong knowledge
+                of Java, OOP, SQL, and backend development. Seeking an Associate Java Consultant /
+                Java Developer role.
+            </p>
+
+            <h2>Professional Experience</h2><br>
+            <ul><p><strong>Software Engineer - Zigmaneural</strong></p></ul>
+            <ul>
+                <li>Currently, I am associated with [Zigmaneural,vizag], where I am gaining hands-on exposure to real-world software development practices. My role allows me to strengthen my technical foundation in programming, problem-solving, and application development while working in a collaborative environment. This experience is helping me understand industry standards, improve my adaptability, and continuously enhance my skills as I work towards becoming a well-rounded and multi-talented software professional.</li>
+            </ul>
+            <ul><p><strong>Python Full Stack Intern – ExcelR Pvt Ltd (2024)</strong></p></ul>
+            <ul>
+                <li>Developed 5+ dynamic web pages using HTML, CSS & JavaScript.</li>
+                <li>Built backend modules using Python Flask.</li>
+                <li>Optimized SQL queries reducing response time by 15%.</li>
+            </ul>
+
+            <h2>Projects</h2>
+            <p><strong>Student Course Management System</strong></p>
+            <ul>
+                <li>CRUD operations using Java & Spring Boot.</li>
+                <li>REST APIs with Hibernate/JPA & MySQL.</li>
+            </ul>
+
+            <p><strong>Online Tutoring System</strong></p>
+            <ul>
+                <li>Full-stack tutor–student application.</li>
+                <li>Handled 100+ users with zero downtime.</li>
+            </ul>
+
+            <h2>Technical Skills</h2>
+            <p>
+                Reactjs, Python , cyber Security, Flask •  
+                MySQL, SQLite3 • VS Code , json,css,tailwind,java <script></script>
+            </p>
+
+            <h2>Education</h2>
+            <p>
+                Sri Padmavathi Mahila University, Tirupati <br>
+                B.Sc Computer Science | GPA 7.6 | 2021–2025
+            </p>
+
+            <h2>Certifications</h2>
+            <ul>
+                <li>Oracle Certified Professional – Java SE 17</li>
+                <li>HackerRank Java (Basic)</li>
+                <li>Beginner Java – LetsUpgrade</li>
+            </ul>
+
+            <a href="resume.pdf" target="_blank" class="btn">Download Resume</a>
+        </div>
+    </div>
+    <!-- INTERESTS -->
+    <div id="interests" class="section">
+        <h2>My Interests</h2>
+        <div class="sub-buttons">
+            <button class="btn" onclick="show('drawings')">My Drawings</button>
+            <button class="btn" onclick="show('thumbnails')">Thumbnail Editing</button>
+            <a href="https://www.instagram.com/bujji.diaries/" target="_blank" class="btn">Content Creator</a>
+        </div>
+    </div>
+
+    <!-- DRAWINGS -->
+    <div id="drawings" class="section">
+        <h2>My Drawings</h2>
+        <div class="gallery">
+            <img src="./images/drawing1.jpeg">
+            <img src="./images/drawing2.jpeg">
+            <img src="./images/drawing3.jpeg">
+        </div>
+    </div>
+
+    <!-- THUMBNAILS -->
+    <div id="thumbnails" class="section">
+        <h2>Thumbnail Editing</h2>
+        <div class="gallery">
             <img src="./images/image1.jpg">
-            <span>Thumbnail Design 1</span>
-        </div>
-
-        <div class="card">
             <img src="./images/image2.jpg">
-            <span>Thumbnail Design 2</span>
-        </div>
-
-        <div class="card">
             <img src="./images/image3.jpg">
-            <span>Thumbnail Design 3</span>
-        </div>
-
-        <div class="card">
             <img src="./images/image4.jpg">
-            <span>Thumbnail Design 4</span>
-        </div>
-
-        <div class="card">
             <img src="./images/image5.jpg">
-            <span>Thumbnail Design 5</span>
-        </div>
-
-        <div class="card">
             <img src="./images/image6.jpg">
-            <span>Thumbnail Design 6</span>
         </div>
-    </section>
+    </div>
 
-    <!-- FOOTER -->
-    <footer>
-        © 2025 Mounika | Designed with ❤️
-    </footer>
+    <!-- CERTIFICATES -->
+    <div id="certificates" class="section">
+        <h2>My Certificates</h2>
+        <div class="sub-buttons">
+            <button class="btn" onclick="show('professional-certificates')">Professional Certificates</button>
+            <button class="btn" onclick="show('other-certificates')">Other Certificates</button>
+        </div>
+    </div>
 
-</body>
-</html>
+    <div id="professional-certificates" class="section">
+        <h2>Professional Certificates</h2>
+        <div class="gallery">
+            <img src="./images/certificate1.jpeg">
+            <img src="./images/certificate2.jpeg">
+            <img src="./images/certificate3.jpeg">
+            <img src="./images/certificate4.jpeg">
+            <img src="./images/certificate5.jpeg">
+            <img src="./images/certificate6.jpeg">
+        </div>
+    </div>
+
+    <div id="other-certificates" class="section">
+        <h2>Other Certificates</h2>
+        <div class="gallery">
+            <img src="./images/other1.jpg">
+            <img src="./images/other2.jpg">
+            <img src="./images/other3.jpg">
+            <img src="./images/other4.jpg">
+            <img src="./images/other5.jpg">
+        </div>
+    </div>
+
+</div>
+
+<footer> Thanks for the support <br> Yours Mouni <span>❤️</span><br> <h6>"This complete interactive page has been created using Reactjs,json and tailwing".</h6> </footer> <script> function show(id){ document.querySelectorAll('.section').forEach(sec=>{ sec.style.display="none"; }); document.getElementById(id).style.display="block"; } </script> </body> </html>
 
